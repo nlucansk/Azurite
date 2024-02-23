@@ -1,4 +1,4 @@
-# Azurite
+# Terrazure
 
 ## Introduction
 Azurite is a "helper tool" designed to help you manage your Azure resources. <br>
