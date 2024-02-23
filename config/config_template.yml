@@ -95,3 +95,24 @@ app_service_plan:
       - key_vault_name: "mykeyvault"
         key_vault_resource_group_name: "mykeyvault-rg"
         key_vault_secret: "certificate01"
+
+# --- Storage Account ---
+storage_account:
+  - name: # Name of the storage account (Maximum 22 characters)
+    location: # Location of the storage account (e.g. westeurope)
+    resource_group_name: # Name of the resource group
+    account_tier: # Optional | Standard, Premium
+    account_replication_type: # Optional | LRS, GRS, RAGRS, ZRS
+    cross_tenant_replication_enabled: True
+    access_tier: # Optional | Hot, Cool ...
+    enable_https_traffic_only: # Optional | True, False
+    min_tls_version: # Optional | TLS1_0, TLS1_1, TLS1_2
+    allow_nested_items_to_be_public: # Optional | True, False
+    shared_access_key_enabled: # Optional | True, False
+    public_network_access_enabled: # Optional | True, False
+    default_to_oauth_authentication: # Optional | True, False
+    nfsv3_enabled: # Optional | True, False
+    tags:
+      environment: "test"
+      version: "1.0.0"
+      createdBy: "TerraformCDK"

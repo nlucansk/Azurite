@@ -35,7 +35,7 @@ Tool can be used "standalone" or as a part of a CI/CD pipeline
 
 ## Capabilities
 - [x] Create Resource group
-- [ ] Create Storage account
+- [X] Create Storage account
 - [X] Create App Service Plan
 - [ ] Create App Service
 - [ ] Create SQL Database

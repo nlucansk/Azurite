@@ -5,6 +5,12 @@ def generate_infrastructure(_app, _config):
     else:
         print("### | >>> resource_group <<< not found ignoring!")
 
+    if "storage_account" in _config:
+        from components.storage_account import StorageAccountStack
+        StorageAccountStack(_app, "storage_account")
+    else:
+        print("### | >>> storage_account <<< not found ignoring!")
+
     if "virtual_network" in _config:
         from components.virtual_network import NetworkStack
         NetworkStack(_app, "virtual_network")
