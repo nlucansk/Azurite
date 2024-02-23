@@ -58,5 +58,5 @@ Tool can be used "standalone" or as a part of a CI/CD pipeline
 - [ ] Create Front Door
 - [ ] Create Mysql Database
 - [ ] Create Postgres Database
-- [ ] Create Container Registry
+- [X] Create Container Registry
 - [ ] Generate Infrastructure Diagram
