@@ -1,7 +1,7 @@
 # Terrazure
 
 ## Introduction
-Azurite is a "helper tool" designed to help you manage your Azure resources. <br>
+Terrazure is a "helper tool" designed to help you manage your Azure resources. <br>
 It's using TerraformCDK to create and manage the resources.
 
 ## Goal
