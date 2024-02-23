@@ -16,3 +16,9 @@ def generate_infrastructure(_app, _config):
         RegistryStack(_app, "container_registry")
     else:
         print("### | >>> container_registry <<< not found ignoring!")
+
+    if "app_service_plan" in _config:
+        from components.app_service_plan import AppServicePlanStack
+        AppServicePlanStack(_app, "app_service_plan")
+    else:
+        print("### | >>> app_service_plan <<< not found ignoring!")

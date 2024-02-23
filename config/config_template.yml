@@ -65,3 +65,33 @@ container_registry:
     resource_group_name: "rg-test-westeurope-group01"
     sku: "Standard"
     admin_enabled: True
+
+app_service_plan:
+  - name: # Name of the app service plan
+    location: # Location of the app service plan (e.g. westeurope, northeurope, etc.)
+    os_type: # OS type of the app service plan (e.g. Windows, Linux)
+    sku_name: # SKU name of the app service plan (e.g. P1v3, P2v3, WS1, etc.)
+    per_site_scaling_enabled: # Per site scaling enabled or not (True/False)
+    worker_count: # Worker count
+  - name: "l01"
+    location: "northeurope"
+    resource_group_name: "rg-test-westeurope-group01"
+    os_type: "Linux"
+    sku_name: "P1v3"
+    per_site_scaling_enabled: True
+    worker_count: 1
+    certificates: # Optional certificates injected to the app service plan
+      - key_vault_name: # Name of the key vault
+        key_vault_resource_group_name: # Name of the resource group where the key vault is located
+        key_vault_secret: # Name of the secret in the key vault (certificate)
+  - name: "w01"
+    location: "westeurope"
+    resource_group_name: "rg-test-westeurope-group01"
+    os_type: "Windows"
+    sku_name: "P1v3"
+    per_site_scaling_enabled: True
+    worker_count: 1
+    certificates:
+      - key_vault_name: "mykeyvault"
+        key_vault_resource_group_name: "mykeyvault-rg"
+        key_vault_secret: "certificate01"
