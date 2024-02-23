@@ -47,3 +47,21 @@ virtual_network:
         delegation: # Optional delegation
           name: "Microsoft.Web/serverFarms"
           actions: [ "Microsoft.Network/virtualNetworks/subnets/join/action" ]
+
+# --- Container Registry ---
+container_registry:
+  - name: # Name of the container registry (It will generate as cr<environment><name>)
+    location: # Location of the container registry
+    resource_group_name: # Name of the resource group where the container registry should go
+    sku: # SKU of the container registry
+    admin_enabled: # Admin enabled or not
+  - name: "ourregistry01"
+    location: "westeurope"
+    resource_group_name: "rg-test-westeurope-group01"
+    sku: "Standard"
+    admin_enabled: True
+  - name: "ourregistry02"
+    location: "westeurope"
+    resource_group_name: "rg-test-westeurope-group01"
+    sku: "Standard"
+    admin_enabled: True
