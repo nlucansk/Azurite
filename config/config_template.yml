@@ -25,3 +25,25 @@ resource_group:
   - name: "group02"
     location: "northeurope"
   # ...
+
+# --- Virtual Networks ---
+virtual_network:
+  - name: # Name of the virtual network
+    location: # Location of the virtual network
+    resource_group_name: # Name of the resource group where the virtual network should go
+    address_space: # Address space of the virtual network
+  - name: "network01"
+    location: "westeurope"
+    resource_group_name: "rg-test-westeurope-group01"
+    address_space: [ "10.101.0.0/16" ]
+    dns_servers: [ "1.1.1.1" ] # Optional DNS servers
+  - name: "network02"
+    location: "northeurope"
+    resource_group_name: "rg-test-northeurope-group01"
+    address_space: [ "10.102.0.0/16", "10.103.0.0/16" ]
+    subnets: # Optional subnets
+      - name: "subnt01" # Name of the subnet
+        address_space: [ "10.102.0.0/24" ] # Address space of the subnet
+        delegation: # Optional delegation
+          name: "Microsoft.Web/serverFarms"
+          actions: [ "Microsoft.Network/virtualNetworks/subnets/join/action" ]

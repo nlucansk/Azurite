@@ -9,3 +9,12 @@ def print_info(_ns):
 
 def get_null_value():
     return Token.as_string(Token.null_value())
+
+
+def generate_resource_tags(_tags):
+    tags = {}
+    if _tags is None:
+        return None
+    for key, value in _tags.items():
+        tags[key] = value
+    return tags

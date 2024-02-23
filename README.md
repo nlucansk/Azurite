@@ -41,7 +41,8 @@ Tool can be used "standalone" or as a part of a CI/CD pipeline
 - [ ] Create SQL Database
 - [ ] Create SQL Server
 - [ ] Create Key Vault
-- [ ] Create Virtual Network
+- [X] Create Virtual Network
+- [X] Create Subnet
 - [ ] Create Virtual Machine
 - [ ] Create Kubernetes Cluster
 - [ ] Create CosmosDB

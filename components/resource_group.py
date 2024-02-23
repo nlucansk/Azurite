@@ -4,8 +4,8 @@ from cdktf import TerraformStack
 # Custom Logic
 from functions.azure_provider import prepare_azure_environment
 from functions.get_config import get_config
-from functions.base import print_info
-from functions.resource_group import create_resource_group, generate_resource_tags
+from functions.base import print_info, generate_resource_tags
+from functions.resource_group import create_resource_group
 
 
 class ResourceGroupStack(TerraformStack):
