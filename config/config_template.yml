@@ -1,0 +1,27 @@
+---
+remote_backend:
+  resource_group_name: # Name of the resource group where the storage account is located
+  storage_account_name: # Name of the storage account
+  container_name: # Name of the container
+  key: # Unique key to identify the state file
+
+general:
+  environment: # Environment name
+
+# --- Resource Group ---
+resource_group:
+  - name: # Name of the resource group
+    location: # Location of the resource group
+    tags: #Optional tags
+      environment: "test"
+      version: "1.0.0"
+      createdBy: "TerraformCDK"
+  - name: "group01"
+    location: "northeurope"
+    tags:
+      environment: "test"
+      owner: "John"
+      organization: "finance"
+  - name: "group02"
+    location: "northeurope"
+  # ...
